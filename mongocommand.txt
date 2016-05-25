@@ -1,0 +1,28 @@
+https://docs.mongodb.com/manual/reference/method/db.collection.insert/
+
+use demoDb
+show colections;
+db.userLogin.find();
+db.userLogin.insert( { userEmail: "dipti", password: "password"} );
+
+//Insert Multiple Documents
+db.userLogin.insert(
+   [
+     { userEmail: "x1", password: "password" },
+     { userEmail: "x2", password: "password" },
+     { userEmail: "x3", password: "password" }
+   ]
+)
+
+
+
+//find
+db.userLogin.find( { userEmail: "x1"} );
+
+//drop
+db.userLogin.drop();
+
+
+//back up mongo db
+
+ C:\> mongodump -d demoDb -o demobackup25052016;
